@@ -6,7 +6,7 @@ FIFO Queue and LIFO Stack subclasses
 import sqlite3
 from time import time
 
-class PriorityQueue:
+class PriorityQueue(object):
     """
     Persistent PriorityQueue 
     A higher number indicates higher priority
@@ -78,3 +78,19 @@ class PriorityQueue:
         
         if count == 0: return True
         else: return False
+
+class Queue(PriorityQueue):
+    """
+    A FIFO Queue
+    """
+    def push(self, item):
+        priority = -time()
+        super(Queue, self).push(priority, item)
+
+class Stack(PriorityQueue):
+    """
+    A LIFO Stack
+    """
+    def push(self, item):
+        priority = time()
+        super(Stack, self).push(priority, item)
