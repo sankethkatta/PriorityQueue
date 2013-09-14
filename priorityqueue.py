@@ -15,7 +15,7 @@ class PriorityQueue(object):
         """
         Initialize the database file and create tables
         """
-        self.__conn = sqlite3.connect('%s' % queue_name)
+        self.__conn = sqlite3.connect(queue_name)
         self.__cursor = self.__conn.cursor()
         sql = """
         CREATE TABLE IF NOT EXISTS
