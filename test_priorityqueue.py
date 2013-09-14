@@ -11,7 +11,7 @@ class TestPriorityQueue(unittest.TestCase):
         self.assertTrue(result)
 
     def test_order(self):
-        self.ppq.push(10, "hello")
+        self.assertEqual("hello", self.ppq.push(10, "hello"))
         self.ppq.push(1, "foo")
         self.ppq.push(30, "bar")
         self.ppq.push(5, "baz")
@@ -27,7 +27,7 @@ class TestQueue(unittest.TestCase):
         self.q = Queue(":memory:")
 
     def test_order(self):
-        self.q.push("hello")
+        self.assertEqual("hello", self.q.push("hello"))
         self.q.push("foo")
         self.q.push("bar")
         self.q.push("baz")
@@ -43,7 +43,7 @@ class TestStack(unittest.TestCase):
         self.q = Stack(":memory:")
 
     def test_order(self):
-        self.q.push("hello")
+        self.assertEqual("hello", self.q.push("hello"))
         self.q.push("foo")
         self.q.push("bar")
         self.q.push("baz")
