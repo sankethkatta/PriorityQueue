@@ -85,7 +85,7 @@ class Queue(PriorityQueue):
     """
     def push(self, item):
         priority = -time()
-        super(Queue, self).push(priority, item)
+        return super(Queue, self).push(priority, item)
 
 class Stack(PriorityQueue):
     """
@@ -93,4 +93,4 @@ class Stack(PriorityQueue):
     """
     def push(self, item):
         priority = time()
-        super(Stack, self).push(priority, item)
+        return super(Stack, self).push(priority, item)
