@@ -4,22 +4,22 @@ from priorityqueue import PriorityQueue, Queue, Stack
 class TestPriorityQueue(unittest.TestCase):
 
     def setUp(self):
-        self.ppq = PriorityQueue(":memory:")
+        self.pq = PriorityQueue(":memory:")
 
     def test_empty(self):
-        result = self.ppq.is_empty()
+        result = self.pq.is_empty()
         self.assertTrue(result)
 
     def test_order(self):
-        self.assertEqual("hello", self.ppq.push(10, "hello"))
-        self.ppq.push(1, "foo")
-        self.ppq.push(30, "bar")
-        self.ppq.push(5, "baz")
+        self.assertEqual("hello", self.pq.push(10, "hello"))
+        self.pq.push(1, "foo")
+        self.pq.push(30, "bar")
+        self.pq.push(5, "baz")
 
-        self.assertEqual("bar", self.ppq.pop())
-        self.assertEqual("hello", self.ppq.pop())
-        self.assertEqual("baz", self.ppq.pop())
-        self.assertEqual("foo", self.ppq.pop())
+        self.assertEqual("bar", self.pq.pop())
+        self.assertEqual("hello", self.pq.pop())
+        self.assertEqual("baz", self.pq.pop())
+        self.assertEqual("foo", self.pq.pop())
 
 class TestQueue(unittest.TestCase):
 

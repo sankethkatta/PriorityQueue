@@ -6,13 +6,13 @@ A persistent priority queue base with FIFO Queue and LIFO Stack structures.
 ```python
 from priorityqueue import PriorityQueue
 
-ppq = PriorityQueue("myppq")
+pq = PriorityQueue("mypq")
 
-ppq.push(priority=1, item="world")
-ppq.push(priority=2, item="hello")
+pq.push(priority=1, item="world")
+pq.push(priority=2, item="hello")
 
-while not ppq.is_empty():
-    print ppq.pop()
+while not pq.is_empty():
+    print pq.pop()
 
 # hello
 # world
